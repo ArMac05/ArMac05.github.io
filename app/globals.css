@@ -11,15 +11,24 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-hero-background: #084d1b --color-hero-dark: #052912
-    --color-chip-bakcground: #f7f0e1 --color-chip-border: #e0c99c
-    --color-gold-primary: #c09f6d --color-gold-label: #aa894f
-    --color-gold-contact: #8c7040 --color-gold-text: #6b5530
-    --color-Coral: #f4784d --color-Coral-hover: #e15e33 --color-Cream: #f8eeda
-    --color-Cream-Dimmed: #c9cfb4 --color-Charcoal-Ink: #151515
-    --color-Ash-muted-text: #6e6e6e --color-Ash-Subtle: #9a968c
-    --color-Paper: #fbf9f4 --color-Project-Banner-Hover: #f5efe1
-    --color-Default-Hairline-Border: #e7e4dc;
+  --color-hero-background: #084d1b;
+  --color-hero-dark: #052912;
+  --color-chip-bakcground: #f7f0e1;
+  --color-chip-border: #e0c99c;
+  --color-gold-primary: #c09f6d;
+  --color-gold-label: #aa894f;
+  --color-gold-contact: #8c7040;
+  --color-gold-text: #6b5530;
+  --color-Coral: #f4784d;
+  --color-Coral-hover: #e15e33;
+  --color-Cream: #f8eeda;
+  --color-Cream-Dimmed: #c9cfb4;
+  --color-Charcoal-Ink: #151515;
+  --color-Ash-muted-text: #6e6e6e;
+  --color-Ash-Subtle: #9a968c;
+  --color-Paper: #fbf9f4;
+  --color-Project-Banner-Hover: #f5efe1;
+  --color-Default-Hairline-Border: #e7e4dc;
 }
 
 @media (prefers-color-scheme: dark) {
