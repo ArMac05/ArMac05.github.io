@@ -1,4 +1,11 @@
-import { Tag } from "./components";
+import { Tag, List_Container } from "./components";
+
+const skills = {
+  Languages: ["Python", "SQL", "React", "C++"],
+  "Data & Orchestration": ["DBT", "Apache Airlfow", "Spark"],
+  "Storage & Cloud": ["BigQuery", "PostgreSQL", "DuckDB"],
+  "Dev Tools": ["VScode", "Docker", "Git", "Databricks"],
+};
 
 export default function Home() {
   return (
@@ -28,9 +35,9 @@ export default function Home() {
         </div>
       </div>
       {/* About Me */}
-      <div className="w-screen h-screen bg-white">
+      <div className="w-auto h-auto bg-white">
         <div className="m-24">
-          <p className="text-gold-label text-2xl font-medium">About</p>
+          <p className="text-gold-label text-xl font-normal">ABOUT</p>
           <div className="grid grid-cols-3">
             <div className="flex flex-col">
               <div className="w-3xs h-70 bg-hero-background rounded-xl text-center">
@@ -39,7 +46,7 @@ export default function Home() {
               <p className="text-Charcoal-Ink font-medium text-xl">
                 Arlim Macaldo
               </p>
-              <p className="text-Ash-muted-text font-normal italic text-lg">
+              <p className="text-Ash-muted-text font-normal italic text-medium">
                 "Quote"
               </p>
             </div>
@@ -62,6 +69,32 @@ export default function Home() {
                 engineers.
               </p>
             </div>
+          </div>
+
+          {/* Skills and Tools */}
+          <p className="text-gold-label text-xl font-norma mt-30">
+            SKILLS & TOOLS
+          </p>
+          <div className="flex justify-between gap-2 mt-2">
+            {Object.entries(skills).map(([category, items]) => (
+              <div key={category}>
+                <List_Container
+                  className="flex flex-col gap-2 w-80 h-60 bg-Paper rounded rounded-2xl rounded-Default-Hairline-Border border-2 p-3 py-4"
+                  text_className="text-Charcoal-Ink text-xl font-bold"
+                  title={category}
+                >
+                  {items.map((items) => (
+                    <div key={items}>
+                      <Tag
+                        className="w-fit p-1 px-4 bg-Cream rounded rounded-3xl border-gold-primary border-1"
+                        text={items}
+                        text_className="text-md text-gold-text"
+                      ></Tag>
+                    </div>
+                  ))}
+                </List_Container>
+              </div>
+            ))}
           </div>
         </div>
       </div>
