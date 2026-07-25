@@ -1,11 +1,6 @@
-import { Tag, List_Container } from "./components";
-
-const skills = {
-  Languages: ["Python", "SQL", "React", "C++"],
-  "Data & Orchestration": ["DBT", "Apache Airlfow", "Spark"],
-  "Storage & Cloud": ["BigQuery", "PostgreSQL", "DuckDB"],
-  "Dev Tools": ["VScode", "Docker", "Git", "Databricks"],
-};
+import { Tag, List_Container } from "@/components";
+import { skills } from "@/data/skills";
+import { ProjectsSection } from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -34,9 +29,9 @@ export default function Home() {
           </button>
         </div>
       </div>
-      {/* About Me */}
       <div className="w-auto h-auto bg-white">
         <div className="m-24">
+          {/* About Me */}
           <p className="text-gold-label text-xl font-normal">ABOUT</p>
           <div className="grid grid-cols-3">
             <div className="flex flex-col">
@@ -72,7 +67,7 @@ export default function Home() {
           </div>
 
           {/* Skills and Tools */}
-          <p className="text-gold-label text-xl font-norma mt-30">
+          <p className="text-gold-label text-xl font-normal mt-25">
             SKILLS & TOOLS
           </p>
           <div className="flex justify-between gap-2 mt-2">
@@ -96,6 +91,9 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Projects */}
+          <ProjectsSection />
         </div>
       </div>
     </div>
