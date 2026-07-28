@@ -1,5 +1,4 @@
 import { Tag } from "@/components";
-import { skills } from "@/data/skills";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import AboutSection from "@/components/AboutSection";
 
