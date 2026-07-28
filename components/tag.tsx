@@ -1,18 +1,17 @@
-import { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface TagProps {
   text: string;
-  icon?: ReactNode;
-  className: string;
-  text_className: string;
+  className?: string;
 }
 
-function Tag({ text, icon, className = "", text_className = "" }: TagProps) {
+// tag.tsx
+export default function Tag({ text, className = "" }: TagProps) {
   return (
-    <div className={`${className}`}>
-      <p className={`${text_className}`}>{text}</p>
-    </div>
+    <span
+      className={twMerge("rounded-2xl border-1 px-3 py-1 w-fit ...", className)}
+    >
+      {text}
+    </span>
   );
 }
-
-export default Tag;

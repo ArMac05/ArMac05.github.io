@@ -1,24 +1,24 @@
-import { Skill } from "@/types/skills";
+import { Skill } from "@/types/skill";
 
 export const skills: Skill[] = [
   {
     id: "languages",
     category: "Langauges",
-    name: ["Python", "SQL", "React", "C++"],
+    names: ["Python", "SQL", "React", "C++"],
   },
   {
     id: "data & orchestration",
     category: "Data & Orchestration",
-    name: ["DBT", "Apache Airflow", "Spark"],
+    names: ["DBT", "Apache Airflow", "Spark"],
   },
   {
     id: "storage & cloud",
     category: "Storage & Cloud",
-    name: ["BigQuery", "PostgreSQL", "DuckDB"],
+    names: ["BigQuery", "PostgreSQL", "DuckDB"],
   },
   {
     id: "dev tools",
     category: "Dev Tools",
-    name: ["VScode", "Docker", "Git", "Databricks"],
+    names: ["VScode", "Docker", "Git", "Databricks"],
   },
 ];

@@ -35,8 +35,8 @@ export function ProjectsSection({
 
   return (
     <section id="projects" className="bg-paper px-12 py-16">
-      <div className="mx-auto max-w-[1080px]">
-        <span className="text-gold-label text-xl font-normal">Projects</span>
+      <div className="mx-8 max-w-[1080px]">
+        <span className="text-gold-label text-lg font-normal">PROJECTS</span>
         <h2 className="mb-7 text-[26px] font-medium text-Charcoal-Ink">
           Things I&apos;ve built
         </h2>
