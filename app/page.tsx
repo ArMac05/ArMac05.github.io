@@ -1,4 +1,4 @@
-import { Tag } from "@/components";
+import { Navbar } from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import AboutSection from "@/components/AboutSection";
@@ -8,6 +8,7 @@ import { ContactSection } from "@/components/ContactSection";
 export default function Home() {
   return (
     <div className="bg-white">
+      <Navbar />
       {/* Hero Card */}
       <HeroSection />
       {/* About Me */}
