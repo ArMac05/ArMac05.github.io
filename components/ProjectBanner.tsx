@@ -58,12 +58,12 @@ export function ProjectBanner({
         />
         <span
           className={`absolute left-1 top-2.5 box-border h-4 w-4 rounded-full border-[3px] border-white ${
-            project.current ? "bg-Coral" : "bg-gold-primary"
+            project.current ? "bg-coral" : "bg-gold-primary"
           }`}
         />
       </div>
 
-      <article className="mb-4 flex-1 overflow-hidden rounded-r-[14px] border border-Default-Hairline-Border bg-Paper">
+      <article className="mb-4 flex-1 overflow-hidden rounded-r-[14px] border border-default-hairline-border bg-paper">
         <h3 id={headingId} className="sr-only">
           {project.name}
         </h3>
@@ -75,10 +75,10 @@ export function ProjectBanner({
           className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-paper"
         >
           <span>
-            <span className="block text-base font-medium text-Charcoal-Ink">
+            <span className="block text-base font-medium text-charcoal-ink">
               {project.name}
             </span>
-            <span className="mt-0.5 block text-[13px] text-Ash-muted-text">
+            <span className="mt-0.5 block text-[13px] text-ash-muted-text">
               {project.shortDescription}
             </span>
           </span>
@@ -96,10 +96,10 @@ export function ProjectBanner({
             id={panelId}
             role="region"
             aria-labelledby={headingId}
-            className="border-t border-Default-Hairline-Border px-5 pb-6"
+            className="border-t border-default-hairline-border px-5 pb-6"
           >
             {project.image ? (
-              <div className="relative mt-5 h-[200px] w-full overflow-hidden rounded-xl border border-Default-Hairline-Border">
+              <div className="relative mt-5 h-[200px] w-full overflow-hidden rounded-xl border border-default-hairline-border">
                 <Image
                   src={project.image.src}
                   alt={project.image.alt}
@@ -109,7 +109,7 @@ export function ProjectBanner({
                 />
               </div>
             ) : (
-              <div className="mt-5 flex h-[200px] w-full items-center justify-center rounded-xl border border-Default-Hairline-Border bg-Cream-Dimmed text-subtle">
+              <div className="mt-5 flex h-[200px] w-full items-center justify-center rounded-xl border border-default-hairline-border bg-cream-dimmed text-ash-subtle">
                 <ImagePlaceholderIcon size={40} aria-hidden="true" />
               </div>
             )}
@@ -118,14 +118,14 @@ export function ProjectBanner({
               {project.tech.map((tool) => (
                 <li
                   key={tool}
-                  className="rounded-full border border-gold-primary bg-Cream px-3 py-1 text-xs text-gold-text"
+                  className="rounded-full border border-gold-primary bg-cream px-3 py-1 text-xs text-gold-text"
                 >
                   {tool}
                 </li>
               ))}
             </ul>
 
-            <p className="mt-4 text-[15px] leading-relaxed text-Charcoal-Ink">
+            <p className="mt-4 text-[15px] leading-relaxed text-charcoal-ink">
               {project.longDescription}
             </p>
 
@@ -136,7 +136,7 @@ export function ProjectBanner({
                     href={project.repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-Coral rounded-[10px] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-Coral-hover"
+                    className="inline-flex items-center gap-1.5 bg-coral rounded-[10px] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-coral-hover"
                   >
                     <GithubMark size={16} />
                     View repo

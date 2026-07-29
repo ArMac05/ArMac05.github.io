@@ -21,7 +21,7 @@ function SkillCard({
           <Tag
             key={name}
             text={name}
-            className="bg-Cream border-gold-primary text-sm text-gold-text"
+            className="bg-cream border-gold-primary text-sm text-gold-text"
           />
         ))}
       </div>

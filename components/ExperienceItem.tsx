@@ -25,21 +25,21 @@ export function ExperienceItem({
 
   return (
     <article
-      className={`gap-3 border-t border-Default-Hairline-Border px-6 py-6 md:grid-cols-[160px_1fr] md:gap-8 ${
+      className={`gap-3 border-t border-default-hairline-border px-6 py-6 md:grid-cols-[160px_1fr] md:gap-8 ${
         isLast ? "border-b" : ""
       }`}
     >
       <div>
-        <p className="text-[13px] font-medium text-Charcoal-Ink">{dateRange}</p>
+        <p className="text-[13px] font-medium text-charcoal-ink">{dateRange}</p>
         {employmentType && (
-          <p className="mt-1 text-xs text-Ash-Subtle">{employmentType}</p>
+          <p className="mt-1 text-xs text-ash-subtle">{employmentType}</p>
         )}
       </div>
 
       <div>
         <div className="mb-2 flex items-center gap-3">
           {logo ? (
-            <div className="relative h-[42px] w-[42px] flex-none overflow-hidden rounded-[10px] border border-Default-Hairline-Border bg-white">
+            <div className="relative h-[42px] w-[42px] flex-none overflow-hidden rounded-[10px] border border-default-hairline-border bg-white">
               <Image
                 src={logo.src}
                 alt={logo.alt}
@@ -50,7 +50,7 @@ export function ExperienceItem({
             </div>
           ) : (
             <div
-              className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[10px] bg-hero-background text-sm font-medium text-Cream"
+              className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[10px] bg-hero-background text-sm font-medium text-cream"
               aria-hidden="true"
             >
               {initials}
@@ -58,14 +58,14 @@ export function ExperienceItem({
           )}
 
           <div>
-            <h3 className="text-base font-medium text-Charcoal-Ink">{role}</h3>
-            <p className="mt-0.5 text-[13px] text-Ash-muted-text">
+            <h3 className="text-base font-medium text-charcoal-ink">{role}</h3>
+            <p className="mt-0.5 text-[13px] text-ash-muted-text">
               {organization}
             </p>
           </div>
         </div>
 
-        <p className="mb-3 mt-2 text-sm leading-relaxed text-Charcoal-Ink">
+        <p className="mb-3 mt-2 text-sm leading-relaxed text-charcoal-ink">
           {description}
         </p>
 
@@ -75,7 +75,7 @@ export function ExperienceItem({
               <Tag
                 key={item}
                 text={item}
-                className="bg-Cream border-gold-primary text-xs text-gold-text"
+                className="bg-cream border-gold-primary text-xs text-gold-text"
               />
             ))}
           </ul>

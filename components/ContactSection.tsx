@@ -55,25 +55,25 @@ export function ContactSection({
     <>
       <section
         id="contact"
-        className="bg-Paper px-6 pb-[52px] pt-[72px] text-center md:px-12"
+        className="bg-paper px-6 pb-[52px] pt-[72px] text-center md:px-12"
       >
         <div className="mx-auto max-w-[1080px]">
           {badge && (
-            <span className="inline-block rounded-full border border-gold-primary bg-Cream px-3 py-1.5 text-xs text-gold-text">
+            <span className="inline-block rounded-full border border-gold-primary bg-cream px-3 py-1.5 text-xs text-gold-text">
               {badge}
             </span>
           )}
 
-          <h2 className="mx-auto mb-3.5 mt-5 max-w-[620px] text-[34px] font-medium leading-tight text-Charcoal-Ink">
+          <h2 className="mx-auto mb-3.5 mt-5 max-w-[620px] text-[34px] font-medium leading-tight text-charcoal-ink">
             {heading}
           </h2>
-          <p className="mx-auto mb-8 max-w-[460px] text-[17px] leading-relaxed text-Ash-muted-text">
+          <p className="mx-auto mb-8 max-w-[460px] text-[17px] leading-relaxed text-ash-muted-text">
             {blurb}
           </p>
 
           <a
             href={`mailto:${email}`}
-            className="mb-11 inline-flex items-center gap-2 rounded-[10px] bg-Coral px-6 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-Coral-hover"
+            className="mb-11 inline-flex items-center gap-2 rounded-[10px] bg-coral px-6 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-coral-hover"
           >
             <Mail size={18} aria-hidden="true" />
             {email}
@@ -87,15 +87,15 @@ export function ContactSection({
                   {...(link.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  className="block rounded-xl border border-Default-Hairline-Border bg-white p-5 transition-colors hover:border-gold-primary"
+                  className="block rounded-xl border border-default-hairline-border bg-white p-5 transition-colors hover:border-gold-primary"
                 >
-                  <span className="mx-auto mb-2.5 flex h-[42px] w-[42px] items-center justify-center rounded-[10px] bg-gold-primary text-gold-priamry">
+                  <span className="mx-auto mb-2.5 flex h-[42px] w-[42px] items-center justify-center rounded-[10px] bg-gold-primary text-gold-primary">
                     <TileIcon icon={link.icon} />
                   </span>
-                  <span className="block text-sm font-medium text-Charcoal-Ink">
+                  <span className="block text-sm font-medium text-charcoal-ink">
                     {link.label}
                   </span>
-                  <span className="mt-0.5 block text-xs text-Ash-Subtle">
+                  <span className="mt-0.5 block text-xs text-ash-subtle">
                     {link.detail}
                   </span>
                 </a>
@@ -105,10 +105,10 @@ export function ContactSection({
         </div>
       </section>
 
-      <footer className="border-t border-Default-Hairline-Border bg-Paper px-6 py-5 md:px-12">
+      <footer className="border-t border-default-hairline-border bg-paper px-6 py-5 md:px-12">
         <div className="mx-auto flex max-w-[1080px] items-center justify-between">
-          <span className="text-[13px] text-Ash-muted-text">{name}</span>
-          <span className="text-xs text-Ash-Subtle">© {year}</span>
+          <span className="text-[13px] text-ash-muted-text">{name}</span>
+          <span className="text-xs text-ash-subtle">© {year}</span>
         </div>
       </footer>
     </>
