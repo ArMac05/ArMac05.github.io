@@ -89,7 +89,7 @@ export function ContactSection({
                     : {})}
                   className="block rounded-xl border border-default-hairline-border bg-white p-5 transition-colors hover:border-gold-primary"
                 >
-                  <span className="mx-auto mb-2.5 flex h-[42px] w-[42px] items-center justify-center rounded-[10px] bg-gold-primary text-gold-primary">
+                  <span className="mx-auto mb-2.5 flex h-[42px] w-[42px] items-center justify-center rounded-[10px] bg-gold-primary text-paper">
                     <TileIcon icon={link.icon} />
                   </span>
                   <span className="block text-sm font-medium text-charcoal-ink">
