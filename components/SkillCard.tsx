@@ -15,7 +15,7 @@ function SkillCard({
   return (
     <div className={className}>
       <p className={text_className}>{skill.category}</p>
-      <div className="h-0.5 w-1/2 bg-gold-primary" />
+      <div className="h-0.5 w-full bg-gold-primary" />
       <div className="flex flex-col gap-2">
         {skill.names.map((name) => (
           <Tag
