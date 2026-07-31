@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import Tag from "@/components/tag";
 export default function HeroSection() {
   return (
@@ -5,7 +6,13 @@ export default function HeroSection() {
       id="hero"
       className="w-full min-h-screen bg-hero-background flex items-center"
     >
-      <div className="w-full max-w-6xl mx-auto px-6 md:px-12">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7 }}
+        className="w-full max-w-6xl mx-auto px-6 md:px-12"
+      >
         <div className="flex flex-col items-start gap-6 max-w-3xl">
           <Tag
             text="Open to Internships"
@@ -26,7 +33,7 @@ export default function HeroSection() {
             View Resume
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

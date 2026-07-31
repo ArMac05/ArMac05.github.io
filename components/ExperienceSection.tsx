@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import { ExperienceItem } from "./ExperienceItem";
 import { experience as defaultExperience } from "@/data/experiences";
 import type { Experience } from "@/types/experience";
@@ -20,7 +21,13 @@ export function ExperienceSection({
 
   return (
     <section id="experience" className="bg-white px-6 py-16 md:px-12">
-      <div className="mx-auto mt-24 max-w-[1080px]">
+      <motion.div
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+        className="mx-auto mt-24 max-w-[1080px]"
+      >
         <span className="mb-2.5 inline-block text-[13px] font-medium uppercase tracking-[0.08em] text-gold-primary">
           {eyebrow}
         </span>
@@ -35,7 +42,7 @@ export function ExperienceSection({
             isLast={i === items.length - 1}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import * as motion from "motion/react-client";
 import { useState } from "react";
 import { ProjectBanner } from "./ProjectBanner";
 import { projects } from "@/data/projects";
@@ -35,7 +36,13 @@ export function ProjectsSection({
 
   return (
     <section id="projects" className="bg-paper px-12 py-16">
-      <div className="mx-auto max-w-[1080px]">
+      <motion.div
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+        className="mx-auto max-w-[1080px]"
+      >
         <span className="text-gold-label text-lg font-normal">PROJECTS</span>
         <h2 className="mb-7 text-[26px] font-medium text-charcoal-ink">
           Things I&apos;ve built
@@ -51,7 +58,7 @@ export function ProjectsSection({
             isLast={i === projects.length - 1}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

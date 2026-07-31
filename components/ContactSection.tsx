@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import { Mail, FileText } from "lucide-react";
 import { contact as defaultContact } from "@/data/contact";
 import type { ContactIcon, ContactInfo } from "@/types/contact";
@@ -57,7 +58,13 @@ export function ContactSection({
         id="contact"
         className="bg-paper px-6 pb-[52px] pt-[72px] text-center md:px-12"
       >
-        <div className="mx-auto max-w-[1080px]">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1 }}
+          className="mx-auto max-w-[1080px]"
+        >
           {badge && (
             <span className="inline-block rounded-full border border-gold-primary bg-cream px-3 py-1.5 text-xs text-gold-text">
               {badge}
@@ -102,7 +109,7 @@ export function ContactSection({
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </section>
 
       <footer className="border-t border-default-hairline-border bg-paper px-6 py-5 md:px-12">
