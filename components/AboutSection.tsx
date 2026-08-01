@@ -2,6 +2,21 @@ import * as motion from "motion/react-client";
 import SkillCard from "./SkillCard";
 import { skills } from "../data/skills";
 
+const container = {
+  hidden: { opacity: 0, y: 32 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1 },
+  },
+};
+
+const list = {
+  visible: {
+    transition: { delayChildren: 0.5, staggerChildren: 0.1 },
+  },
+};
+
 export default function AboutSection() {
   return (
     <section id="about" className="bg-white px-12 py-16">
@@ -22,7 +37,7 @@ export default function AboutSection() {
                 Arlim Macaldo
               </p>
               <p className="text-ash-muted-text font-normal italic text-medium">
-                "Quote"
+                “Quote”
               </p>
             </div>
             <div className="flex flex-col col-span-2 gap-6">
@@ -31,7 +46,7 @@ export default function AboutSection() {
                 just work.
               </p>
               <p className="text-charcoal-ink font-normal text-medium">
-                I'm a CS student at UNLV focused on data engineering. Most of my
+                I’m a CS student at UNLV focused on data engineering. Most of my
                 projects start with a messy, real-world data source and end with
                 something clean and queryable that someone can actually build
                 on. I love working on scalable systems, debugging complex data
@@ -49,15 +64,19 @@ export default function AboutSection() {
 
         {/* Skills and Tools */}
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 1 }}
         >
           <p className="text-gold-label text-lg font-normal mt-25 mb-4">
-            SKILLS & TOOLS
+            SKILLS &amp; TOOLS
           </p>
-          <section id="skills" className="flex flex-1 gap-4 justify-between">
+          <motion.section
+            variants={list}
+            id="skills"
+            className="flex flex-1 gap-4 justify-between"
+          >
             {skills.map((skills) => (
               <SkillCard
                 key={skills.category}
@@ -65,7 +84,7 @@ export default function AboutSection() {
                 skill={skills}
               ></SkillCard>
             ))}
-          </section>
+          </motion.section>
         </motion.div>
       </div>
     </section>

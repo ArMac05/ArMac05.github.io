@@ -20,7 +20,7 @@ export default function HeroSection() {
           ></Tag>
           <div className="">
             <p className="font-bold text-6xl text-cream">
-              Hi, I'm Arlim Macaldo
+              Hi, I’m Arlim Macaldo
             </p>
           </div>
           <div>
