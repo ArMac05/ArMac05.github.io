@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Tag from "./tag";
 import {
   ExternalLink,
   ChevronDown,
@@ -116,12 +117,11 @@ export function ProjectBanner({
 
             <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
               {project.tech.map((tool) => (
-                <li
+                <Tag
                   key={tool}
-                  className="rounded-full border border-gold-primary bg-cream px-3 py-1 text-xs text-gold-text"
-                >
-                  {tool}
-                </li>
+                  text={tool}
+                  className="bg-cream hover:bg-chip-border transition-colors border-gold-primary text-sm text-gold-text"
+                />
               ))}
             </ul>
 

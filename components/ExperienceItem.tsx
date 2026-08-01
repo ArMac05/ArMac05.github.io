@@ -75,7 +75,7 @@ export function ExperienceItem({
               <Tag
                 key={item}
                 text={item}
-                className="bg-cream border-gold-primary text-xs text-gold-text"
+                className="bg-cream hover:bg-chip-border transition-colors border-gold-primary text-sm text-gold-text"
               />
             ))}
           </ul>
