@@ -31,7 +31,7 @@ export function ExperienceSection({
         <span className="mb-2.5 inline-block text-[13px] font-medium uppercase tracking-[0.08em] text-gold-primary">
           {eyebrow}
         </span>
-        <h2 className="mb-7 text-[26px] font-medium text-charcoal-ink">
+        <h2 className="mb-7 text-2xl font-medium text-charcoal-ink">
           {heading}
         </h2>
 

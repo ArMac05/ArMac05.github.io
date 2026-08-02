@@ -2,6 +2,12 @@ import * as motion from "motion/react-client";
 import { Mail, FileText } from "lucide-react";
 import { contact as defaultContact } from "@/data/contact";
 import type { ContactIcon, ContactInfo } from "@/types/contact";
+import { ResumeDialog } from "@/components/ResumeDialog";
+
+type ContactLink = ContactInfo["links"][number];
+
+const TILE_CLASS =
+  "block rounded-xl border border-default-hairline-border bg-white p-5 transition-colors hover:border-gold-primary";
 
 /** lucide-react dropped brand marks in v1, so brand logos are inline SVGs. */
 function GithubMark({ size = 20 }: { size?: number }) {
@@ -36,6 +42,23 @@ function TileIcon({ icon }: { icon: ContactIcon }) {
   if (icon === "github") return <GithubMark size={20} />;
   if (icon === "linkedin") return <LinkedinMark size={20} />;
   return <FileText size={20} aria-hidden="true" />;
+}
+
+/** Tile guts, shared by the plain-anchor and dialog-wrapped variants. */
+function TileBody({ link }: { link: ContactLink }) {
+  return (
+    <>
+      <span className="mx-auto mb-2.5 flex h-[42px] w-[42px] items-center justify-center rounded-[10px] bg-gold-primary text-paper">
+        <TileIcon icon={link.icon} />
+      </span>
+      <span className="block text-sm font-medium text-charcoal-ink">
+        {link.label}
+      </span>
+      <span className="mt-0.5 block text-xs text-ash-subtle">
+        {link.detail}
+      </span>
+    </>
+  );
 }
 
 interface ContactSectionProps {
@@ -89,23 +112,21 @@ export function ContactSection({
           <ul className="mx-auto grid max-w-[560px] list-none grid-cols-1 gap-3.5 p-0 sm:grid-cols-3">
             {links.map((link) => (
               <li key={link.id}>
-                <a
-                  href={link.href}
-                  {...(link.external
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
-                  className="block rounded-xl border border-default-hairline-border bg-white p-5 transition-colors hover:border-gold-primary"
-                >
-                  <span className="mx-auto mb-2.5 flex h-[42px] w-[42px] items-center justify-center rounded-[10px] bg-gold-primary text-paper">
-                    <TileIcon icon={link.icon} />
-                  </span>
-                  <span className="block text-sm font-medium text-charcoal-ink">
-                    {link.label}
-                  </span>
-                  <span className="mt-0.5 block text-xs text-ash-subtle">
-                    {link.detail}
-                  </span>
-                </a>
+                {link.icon === "resume" ? (
+                  <ResumeDialog href={link.href} className={TILE_CLASS}>
+                    <TileBody link={link} />
+                  </ResumeDialog>
+                ) : (
+                  <a
+                    href={link.href}
+                    {...(link.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className={TILE_CLASS}
+                  >
+                    <TileBody link={link} />
+                  </a>
+                )}
               </li>
             ))}
           </ul>

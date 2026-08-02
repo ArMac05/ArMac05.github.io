@@ -12,7 +12,7 @@ export const contact: ContactInfo = {
       icon: "github",
       label: "GitHub",
       detail: "github.com/arlim",
-      href: "https://github.com/arlim",
+      href: "https://github.com/ArMac05",
       external: true,
     },
     {
@@ -20,7 +20,7 @@ export const contact: ContactInfo = {
       icon: "linkedin",
       label: "LinkedIn",
       detail: "linkedin.com/in/arlim",
-      href: "https://linkedin.com/in/arlim",
+      href: "https://www.linkedin.com/in/arlim-macaldo",
       external: true,
     },
     {
@@ -28,7 +28,7 @@ export const contact: ContactInfo = {
       icon: "resume",
       label: "Résumé",
       detail: "PDF, one page",
-      href: "/arlim-macaldo-resume.pdf",
+      href: "/Arlim-Macaldo-Resume.pdf",
     },
   ],
 };

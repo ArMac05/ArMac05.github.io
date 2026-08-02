@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import { ResumeDialog } from "@/components/ResumeDialog";
 import Tag from "@/components/tag";
 
 export default function HeroSection() {
@@ -43,9 +44,11 @@ export default function HeroSection() {
             pipelines and turning messy data into something usable.
           </p>
 
-          <button className="bg-coral text-hero-background font-bold text-white rounded-xl px-6 h-12">
-            View Resume
-          </button>
+          <div className="flex items-center bg-coral text-hero-background font-bold text-white rounded-xl px-6 h-12 hover:bg-coral-hover">
+            <ResumeDialog href="/Arlim-Macaldo-Resume.pdf">
+              View Resume
+            </ResumeDialog>
+          </div>
         </motion.div>
       </motion.div>
     </section>
