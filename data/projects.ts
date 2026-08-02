@@ -1,4 +1,5 @@
 import type { Project } from "@/types/project";
+import nbaDashboard from "@/public/NBA-metrics-powerBI.png";
 
 /**
  * Add a project by adding an object here — no markup changes needed.
@@ -7,36 +8,27 @@ import type { Project } from "@/types/project";
  */
 export const projects: Project[] = [
   {
-    slug: "realtime-ingestion-demo",
-    name: "Realtime ingestion demo",
+    slug: "nba-data-pipeline",
+    name: "NBA Data Pipeline",
     shortDescription:
-      "Streaming events into a warehouse with dbt models on top.",
+      "Full end-to-end pipeline of basketball game data for the current year with a dashboard.",
     longDescription:
-      "A hands-on project simulating a live event stream — producers push JSON events through Kafka, a consumer lands them in BigQuery, and dbt builds staging and mart models on top. I added tests to catch schema drift and a freshness check so stale data is obvious. Built to teach myself where realtime pipelines actually break.",
-    tech: ["Python", "Kafka", "dbt", "BigQuery"],
-    repoUrl: "https://github.com/arlim/realtime-ingestion-demo",
-    demoUrl: "https://realtime-demo.example.com",
+      "Designed an end-to-end data pipeline using medallion architecture (Bronze, Silver, Gold) to ingest and transform NBA game data, automated pipeline runs with Airflow and containerized the environment with Docker for reproducible, isolated development, and built a PowerBI dashboard delivering player and game insights from the Gold layer.",
+    tech: ["Python", "SQL", "Airflow", "DBT", "DuckDB", "PowerBI", "Docker"],
+    repoUrl: "https://github.com/ArMac05/NBA-Data-Engineering-Pipeline",
     current: true,
+    image: {
+      src: nbaDashboard,
+      alt: "Power BI dashboard of NBA team metrics — points per game, points allowed, and per-quarter scoring",
+    },
   },
   {
-    slug: "nyc-taxi-pipeline",
-    name: "NYC taxi pipeline",
-    shortDescription:
-      "Batch ETL with Airflow, partitioned and tested end to end.",
+    slug: "portfolio-website",
+    name: "Portfolio Website",
+    shortDescription: "Portfolio website to understand me a little better.",
     longDescription:
-      "An orchestrated batch pipeline over the public NYC taxi dataset. Airflow DAGs pull monthly files, clean and partition them, and load into Postgres with row-count and null checks between stages. A good exercise in idempotent runs and backfills without duplicating data.",
-    tech: ["Python", "Airflow", "Postgres"],
-    repoUrl: "https://github.com/arlim/nyc-taxi-pipeline",
-  },
-  {
-    slug: "course-grade-analyzer",
-    name: "Course grade analyzer",
-    shortDescription:
-      "Python and Pandas dashboard over my own transcript data.",
-    longDescription:
-      "A small analytics app that parses my transcript and visualizes grade trends by term and subject. Built mostly to get comfortable with Pandas reshaping and a lightweight Streamlit front end. Simple, but it shipped and I use it.",
-    tech: ["Python", "Pandas", "Streamlit"],
-    repoUrl: "https://github.com/arlim/course-grade-analyzer",
-    demoUrl: "https://grades.example.com",
+      "Built and deployed a personal portfolio site with Next.js, React, TypeScript, and Tailwind CSS, driven by a typed content model that renders experience, projects, and skills from structured data rather than hardcoded markup. Implemented responsive layouts and accessible semantic markup, with automated builds and deployment to GitHub Pages via GitHub Actions.",
+    tech: ["React", "Typescript", "Tailwind"],
+    repoUrl: "https://github.com/ArMac05/ArMac05.github.io",
   },
 ];

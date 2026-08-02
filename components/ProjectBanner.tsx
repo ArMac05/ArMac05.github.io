@@ -101,13 +101,18 @@ export function ProjectBanner({
             className="border-t border-default-hairline-border px-4 pb-5 md:px-5 md:pb-6"
           >
             {project.image ? (
-              <div className="relative mt-4 h-40 w-full overflow-hidden rounded-xl border border-default-hairline-border md:mt-5 md:h-[200px]">
+              /*
+               * Fixed-height window onto the screenshot at its natural size.
+               * `max-w-none` opts the image out of Tailwind preflight's
+               * `max-width: 100%`, so anything wider than the frame overflows
+               * and scrolls rather than being cropped away by object-cover.
+               */
+              <div className="mt-4 h-40 w-full overflow-auto overscroll-contain rounded-xl border border-default-hairline-border md:mt-5 md:h-[200px]">
                 <Image
                   src={project.image.src}
                   alt={project.image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 700px"
+                  className="max-w-none"
+                  loading="eager"
                 />
               </div>
             ) : (

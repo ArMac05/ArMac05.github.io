@@ -1,7 +1,7 @@
 import type { ContactInfo } from "@/types/contact";
 
 export const contact: ContactInfo = {
-  email: "arlim.macaldo@email.com",
+  email: "arlim.macaldo@gmail.com",
   badge: "Open to internships",
   heading: "Let's build something together.",
   blurb:

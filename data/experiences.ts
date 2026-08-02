@@ -7,40 +7,27 @@ import type { Experience } from "@/types/experience";
  */
 export const experience: Experience[] = [
   {
-    id: "university-data-lab",
-    dateRange: "Jun 2025 — present",
-    employmentType: "Part-time",
-    role: "Undergraduate research assistant",
-    organization: "University Data Lab",
-    initials: "UL",
+    id: "data-intern-bi",
+    dateRange: "Apr 2026 - Aug 2026",
+    employmentType: "Full-time",
+    role: "Data Intern (Business Intelligence)",
+    organization: "Neato",
+    initials: "N",
     logo: {
-      src: "/logos/university-data-lab.png",
-      alt: "University Data Lab logo",
+      src: "/thisisneato_logo.png",
+      alt: "Neato Company Logo",
     },
     description:
-      "Help maintain the lab's data pipeline — cleaning survey datasets, writing reproducible Python scripts, and documenting schemas so other students can pick up the work.",
-    tech: ["Python", "Pandas", "Git"],
-  },
-  {
-    id: "cs-teaching-assistant",
-    dateRange: "Jan 2025 — May 2025",
-    employmentType: "On campus",
-    role: "Teaching assistant, intro to CS",
-    organization: "Department of Computer Science",
-    initials: "CS",
-    description:
-      "Ran weekly lab sessions for 30 first-year students, graded assignments, and held office hours. Learned to explain messy technical ideas simply — which turns out to be most of the job.",
-    tech: ["Python", "Teaching"],
-  },
-  {
-    id: "campus-it-help-desk",
-    dateRange: "Jun 2024 — Aug 2024",
-    employmentType: "Summer",
-    role: "IT help desk assistant",
-    organization: "Campus IT Services",
-    initials: "HD",
-    description:
-      "First real tech job — troubleshooting hardware and accounts, and quietly automating a few repetitive ticket tasks with small scripts. Where I got hooked on making systems do the boring parts.",
-    tech: ["Bash", "Support"],
+      "QC'd and validated 20+ BigQuery tables during a company-wide data " +
+      "warehouse migration, reconciling new tables against the legacy database " +
+      "to confirm parity or improved accuracy before cutover, and rebuilt Omni " +
+      "Analytics dashboards on the new warehouse to maintain continuity of " +
+      "brand reporting. Wrote and validated SQL queries in BigQuery to support " +
+      "reporting and analysis of e-commerce brand performance data, and built " +
+      "an internal AI plugin (Claude, Python, React, TypeScript, SQL, BigQuery) " +
+      "that generates an interactive Year in Review report for any client " +
+      "brand — a prompt-driven workflow producing HTML reports with custom " +
+      "charts and interactivity.",
+    tech: ["SQL", "BigQuery", "Claude", "Python", "Omni Analytics"],
   },
 ];

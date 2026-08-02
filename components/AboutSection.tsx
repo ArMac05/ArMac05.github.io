@@ -37,15 +37,13 @@ export default function AboutSection() {
             {/* Compact avatar row on phones, portrait card on desktop. */}
             <div className="flex flex-row items-center gap-4 md:flex-col md:items-start md:gap-0">
               <div className="flex h-24 w-24 flex-none items-center justify-center rounded-xl bg-hero-background p-2 text-center text-[11px] text-cream md:h-70 md:w-3xs md:text-base">
-                Photo Placeholder
+                AM
               </div>
               <div className="md:mt-2">
                 <p className="text-charcoal-ink font-medium text-lg md:text-xl">
                   Arlim Macaldo
                 </p>
-                <p className="text-ash-muted-text font-normal italic text-sm md:text-base">
-                  “Quote”
-                </p>
+                <p className="text-ash-muted-text font-normal italic text-sm md:text-base"></p>
               </div>
             </div>
             <div className="flex flex-col gap-4 md:col-span-2 md:gap-6">

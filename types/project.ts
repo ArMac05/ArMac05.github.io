@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image";
+
 export interface Project {
   /** Stable identifier — used as the React key and the anchor id. */
   slug: string;
@@ -13,9 +15,14 @@ export interface Project {
   repoUrl?: string;
   /** Live demo URL. Omit and the coral demo button won't render. */
   demoUrl?: string;
-  /** Screenshot of the actual project. Omit to show the placeholder. */
+  /**
+   * Screenshot of the actual project. Omit to show the placeholder.
+   * Import the file (`import shot from "@/public/shot.png"`) rather than
+   * passing a path string — that hands next/image the real dimensions and
+   * turns a wrong filename into a build error instead of a blank box.
+   */
   image?: {
-    src: string;
+    src: StaticImageData;
     /** Describe what the screenshot shows, not "screenshot of project". */
     alt: string;
   };
