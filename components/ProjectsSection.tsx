@@ -35,7 +35,10 @@ export function ProjectsSection({
   }
 
   return (
-    <section id="projects" className="bg-paper px-12 py-16">
+    <section
+      id="projects"
+      className="bg-paper px-6 py-12 scroll-mt-20 md:px-12 md:py-16"
+    >
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +47,7 @@ export function ProjectsSection({
         className="mx-auto max-w-[1080px]"
       >
         <span className="text-gold-label text-lg font-normal">PROJECTS</span>
-        <h2 className="mb-7 text-[26px] font-medium text-charcoal-ink">
+        <h2 className="mb-6 text-2xl font-medium text-charcoal-ink md:mb-7 md:text-[26px]">
           Things I&apos;ve built
         </h2>
 

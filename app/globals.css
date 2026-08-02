@@ -8,6 +8,16 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* Anchor jumps land under the fixed navbar without it, and a dragged Tag
+   shouldn't be able to open up a sideways scroll. */
+:target {
+  scroll-margin-top: 5rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

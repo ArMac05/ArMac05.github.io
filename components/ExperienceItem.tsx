@@ -25,14 +25,15 @@ export function ExperienceItem({
 
   return (
     <article
-      className={`gap-3 border-t border-default-hairline-border px-6 py-6 md:grid-cols-[160px_1fr] md:gap-8 ${
+      className={`grid grid-cols-1 gap-3 border-t border-default-hairline-border py-5 md:grid-cols-[160px_1fr] md:gap-8 md:px-6 md:py-6 ${
         isLast ? "border-b" : ""
       }`}
     >
-      <div>
+      {/* One line on phones, stacked in the date column on desktop. */}
+      <div className="flex flex-wrap items-baseline gap-x-2 md:block">
         <p className="text-[13px] font-medium text-charcoal-ink">{dateRange}</p>
         {employmentType && (
-          <p className="mt-1 text-xs text-ash-subtle">{employmentType}</p>
+          <p className="text-xs text-ash-subtle md:mt-1">{employmentType}</p>
         )}
       </div>
 
@@ -57,7 +58,7 @@ export function ExperienceItem({
             </div>
           )}
 
-          <div>
+          <div className="min-w-0">
             <h3 className="text-base font-medium text-charcoal-ink">{role}</h3>
             <p className="mt-0.5 text-[13px] text-ash-muted-text">
               {organization}

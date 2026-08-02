@@ -20,15 +20,18 @@ export function ExperienceSection({
   if (items.length === 0) return null;
 
   return (
-    <section id="experience" className="bg-white px-6 py-16 md:px-12">
+    <section
+      id="experience"
+      className="bg-white px-6 py-12 scroll-mt-20 md:px-12 md:py-16"
+    >
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1 }}
-        className="mx-auto mt-24 max-w-[1080px]"
+        className="mx-auto mt-8 max-w-[1080px] md:mt-24"
       >
-        <span className="mb-2.5 inline-block text-[13px] font-medium uppercase tracking-[0.08em] text-gold-primary">
+        <span className="mb-2.5 inline-block text-lg font-medium uppercase tracking-[0.08em] text-gold-primary">
           {eyebrow}
         </span>
         <h2 className="mb-7 text-2xl font-medium text-charcoal-ink">

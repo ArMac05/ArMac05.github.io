@@ -53,7 +53,8 @@ export function ProjectBanner({
 
   return (
     <div className="flex">
-      <div className="relative w-11 flex-none" aria-hidden="true">
+      {/* Narrower rail on phones — 44px of gutter is a lot out of 375px. */}
+      <div className="relative w-7 flex-none md:w-11" aria-hidden="true">
         <span
           className={`absolute left-[11px] w-0.5 bg-hero-background ${railHeight}`}
         />
@@ -73,7 +74,7 @@ export function ProjectBanner({
           onClick={onToggle}
           aria-expanded={isOpen}
           aria-controls={panelId}
-          className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-paper"
+          className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left transition-colors hover:bg-paper md:gap-4 md:px-5 md:py-4"
         >
           <span>
             <span className="block text-base font-medium text-charcoal-ink">
@@ -97,10 +98,10 @@ export function ProjectBanner({
             id={panelId}
             role="region"
             aria-labelledby={headingId}
-            className="border-t border-default-hairline-border px-5 pb-6"
+            className="border-t border-default-hairline-border px-4 pb-5 md:px-5 md:pb-6"
           >
             {project.image ? (
-              <div className="relative mt-5 h-[200px] w-full overflow-hidden rounded-xl border border-default-hairline-border">
+              <div className="relative mt-4 h-40 w-full overflow-hidden rounded-xl border border-default-hairline-border md:mt-5 md:h-[200px]">
                 <Image
                   src={project.image.src}
                   alt={project.image.alt}
@@ -110,7 +111,7 @@ export function ProjectBanner({
                 />
               </div>
             ) : (
-              <div className="mt-5 flex h-[200px] w-full items-center justify-center rounded-xl border border-default-hairline-border bg-cream-dimmed text-ash-subtle">
+              <div className="mt-4 flex h-40 w-full items-center justify-center rounded-xl border border-default-hairline-border bg-cream-dimmed text-ash-subtle md:mt-5 md:h-[200px]">
                 <ImagePlaceholderIcon size={40} aria-hidden="true" />
               </div>
             )}
@@ -136,7 +137,7 @@ export function ProjectBanner({
                     href={project.repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-coral rounded-[10px] px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-coral-hover"
+                    className="inline-flex items-center gap-1.5 bg-coral rounded-[10px] px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-coral-hover md:py-2"
                   >
                     <GithubMark size={16} />
                     View repo
@@ -147,7 +148,7 @@ export function ProjectBanner({
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-[10px] bg-coral px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-coral-hover"
+                    className="inline-flex items-center gap-1.5 rounded-[10px] bg-coral px-4 py-2.5 text-[13px] font-medium text-white transition-colors hover:bg-coral-hover md:py-2"
                   >
                     <ExternalLink size={16} aria-hidden="true" />
                     Live demo

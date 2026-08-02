@@ -79,7 +79,7 @@ export function ContactSection({
     <>
       <section
         id="contact"
-        className="bg-paper px-6 pb-[52px] pt-[72px] text-center md:px-12"
+        className="bg-paper px-6 pb-12 pt-14 text-center scroll-mt-20 md:px-12 md:pb-[52px] md:pt-[72px]"
       >
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -94,22 +94,23 @@ export function ContactSection({
             </span>
           )}
 
-          <h2 className="mx-auto mb-3.5 mt-5 max-w-[620px] text-[34px] font-medium leading-tight text-charcoal-ink">
+          <h2 className="mx-auto mb-3.5 mt-5 max-w-[620px] text-[26px] font-medium leading-tight text-charcoal-ink sm:text-[30px] md:text-[34px]">
             {heading}
           </h2>
-          <p className="mx-auto mb-8 max-w-[460px] text-[17px] leading-relaxed text-ash-muted-text">
+          <p className="mx-auto mb-8 max-w-[460px] text-base leading-relaxed text-ash-muted-text md:text-[17px]">
             {blurb}
           </p>
 
+          {/* max-w + break-all so a long address wraps instead of widening the page. */}
           <a
             href={`mailto:${email}`}
-            className="mb-11 inline-flex items-center gap-2 rounded-[10px] bg-coral px-6 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-coral-hover"
+            className="mb-10 inline-flex max-w-full items-center justify-center gap-2 break-all rounded-[10px] bg-coral px-5 py-3.5 text-sm font-medium text-white transition-colors hover:bg-coral-hover md:mb-11 md:px-6 md:text-[15px]"
           >
-            <Mail size={18} aria-hidden="true" />
+            <Mail size={18} className="flex-none" aria-hidden="true" />
             {email}
           </a>
 
-          <ul className="mx-auto grid max-w-[560px] list-none grid-cols-1 gap-3.5 p-0 sm:grid-cols-3">
+          <ul className="mx-auto grid max-w-[560px] list-none grid-cols-1 gap-3 p-0 sm:grid-cols-3 sm:gap-3.5">
             {links.map((link) => (
               <li key={link.id}>
                 {link.icon === "resume" ? (

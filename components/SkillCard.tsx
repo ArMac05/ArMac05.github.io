@@ -25,7 +25,9 @@ function SkillCard({
   return (
     <motion.div
       variants={item}
-      whileHover={{ scale: 1.1 }}
+      // Kept subtle: in the 2-up phone grid a 1.1 lift overlapped the neighbour,
+      // and a tap leaves the hover state latched until you tap elsewhere.
+      whileHover={{ scale: 1.03 }}
       className={className}
     >
       <p className={text_className}>{skill.category}</p>
